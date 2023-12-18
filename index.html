@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button type="button" id="button">Öppna modalfönster</button>
+    <div class="modal" id="accessibleModal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalText" aria-modal="true">
+      <h2 id="modalTitle">Exempel på modalfönster</h2>
+      <p id="modalText">Här är lite text i modalfönstret.</p>
+      <button id="closeModalBtn" aria-label="Stäng modalfönster">Stäng</button>
+    </div>
+    <button type="button" id="button2">Öppna modalfönster med dialog</button>
+    <dialog class="modal" id="accessibleDialog" aria-labelledby="dialogTitle" aria-describedby="dialogText">
+      <h2 id="dialogTitle">Exempel på tillgängligt modalfönster med &lt;dialog&gt;</h2>
+      <p id="dialogText">Här är innehållet i modalfönstret.</p>
+      <button id="closeDialogBtn" aria-label="Stäng dialog">Stäng</button>
+    </dialog>
+    <button id="menuButton">Meny</button>
+    <nav id="menuContent" hidden role="menu">
+      <ul id="listContent">
+        <li role="menuitem"><a href="#">Hem</a></li>
+        <li role="menuitem"><a href="#">Om oss</a></li>
+        <li role="menuitem"><a href="#">Tjänster</a></li>
+        <li role="menuitem"><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+    <script src="code.js"></script>
+  </body>
+</html>
+
+<!--Fördelar med att använda dialogelementet ur ett tillgänglighetsperspektiv är bland annat
+   att man kan stänga rutan genom att trycka på escape by default och att fokus automatiskt hamnar på innehållet
+  i rutan när man öppnar den -->
